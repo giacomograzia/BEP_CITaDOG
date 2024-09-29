@@ -1,0 +1,22 @@
+# Data manipulation and analysis
+pandas
+numpy
+
+# Data visualization
+matplotlib
+seaborn
+
+# Natural Language Processing
+nltk
+spacy
+transformers
+
+# Machine Learning
+scikit-learn
+
+# For rule-based processing
+regex
+
+# Miscellaneous
+tqdm  # For progress bars
+jupyterlab  # For Jupyter Notebook support
