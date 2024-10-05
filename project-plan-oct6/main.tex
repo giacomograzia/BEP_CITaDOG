@@ -5,19 +5,22 @@
 
 % you may include other packages here (next line)
 \usepackage{enumitem}
+\usepackage{hyperref}
 
 
 
 %----- you must not change this -----------------
 \oddsidemargin 0.2cm
 \topmargin -1.0cm
-\textheight 24.0cm
+\textheight 22.0cm % Reduced height to create more space at the bottom
 \textwidth 15.25cm
+\footskip 1.5cm % Increase this value for more space between text and footer
 \parindent=0pt
 \parskip 1ex
 \renewcommand{\baselinestretch}{1.1}
 \pagestyle{fancy}
-%----------------------------------------------------
+%---------------------
+
 
 
 
@@ -88,23 +91,24 @@
 \textbf{Research Questions}
 \begin{itemize}
 \item Primary RQ:
+\textit{How can NLP techniques be applied to effectively* extract and structure key metadata from Dutch administrative decisions (energy permits), while overcoming the challenge of incomplete labels using weak labeling techniques, and comparing the performance of different approaches, including rule-based methods and machine learning?}
 
-“\textit{How can NLP techniques be effectively utilized to extract and structure key metadata from Dutch administrative decisions (energy permits) to improve their transparency and comparability?}”
+*\textit{\textbf{effectiveness}} refers to the ability of NLP techniques to extract and structure metadata from administrative decisions in a way that achieves satisfactory outcomes across multiple dimensions: accuracy, efficiency, scalability, and adaptability. An approach is considered effective if it yields high-quality results, is feasible to implement, and can be applied to various types of decisions with minimal supervision.
 
-\item (Possible) sub-questions:
+\item Sub-questions:
     \begin{itemize}
-        \item \textit{What are the specific challenges associated with processing legal language in Dutch?} \\ (e.g. any difficulty related to the language, availability of other studies/ML libraries to work with).
-        \item \textit{Can the developed methods be generalized across different types of administrative decisions?} \\ (e.g. identification of recipient, reasons, topic, date, etc. of a non-legal document).
-        \item \textit{How can rule-based methods and machine learning models be combined to achieve the best results?} \\ (useful to compare different strategies, their advantages and disadvantages, their results).
-        \item \textit{What are the most relevant NLP techniques for this task?} \\ (also related to previous sub-question).
-        \item \textit{How can these techniques be tailored to specific types of administrative decisions?} \\(this is similar to the SQ on generalization of the methods to different types of administrative decisions, but allows to explain what are the specificities of the documents we are working with).
-        \item \textit{What challenges arise in processing and interpreting legal or bureaucratic language?} \\ (can be incorporated to the SQ on the Dutch language and its challenges). 
-        \item \textit{How can large language models (LLMs) be used effectively for extracting key information from administrative decisions, and what strategies can be employed to ensure accuracy and reliability in their outputs?}
-        \item \textit{How can the results be reliably evaluated in the absence of pre-labeled data, considering both qualitative and quantitative evaluation methods?}  
-        \item \textit{What alternative approaches (e.g., weak supervision, manual annotation, or unsupervised techniques) can be employed to assess the extracted information?}
+        \item \textit{How can weak labeling techniques be applied to systematically categorize Dutch administrative decisions, addressing the issue of incomplete data labeling (e.g., by leveraging legal keywords from document titles)?}
+        Possible reflection points:
+        \item \textit{Which NLP techniques (e.g., rule-based, machine learning, or others)—alone or in combination—are most effective in extracting key metadata from administrative decisions in the absence of fully labeled data?}
+    \end{itemize}
+    \item Points of relfection (while answering the questions):
+    \begin{itemize}
+        \item Specific challenges associated with processing legal language in Dutch?
+        \item Generalization across different types of administrative decisions?
+        \item For when dealing with ML approaches:  how can large language models (LLMs) be used for extracting key information from administrative decisions, and what strategies can be employed to ensure accuracy and reliability in their outputs?
+        \item Non-quantitative evaluation: how? 
     \end{itemize}
 \end{itemize}
-
 
 \textbf{Proposed Methodology}
 \setlength{\itemsep}{0pt} % Reduce space between list items
@@ -120,14 +124,27 @@
 \end{enumerate}
 
 \textbf{Literature Search}\\
-So far, the literature review has focused on the papers recommended on the project page of the BEP Marketplace. As the project progresses, additional research will be conducted, particularly to address areas that prove more complex and require a deeper understanding of the relevant context and methodologies. This ongoing literature exploration will help refine the approach and ensure that the project stays aligned with current developments in the field.
+So far, the literature review has focused on the papers recommended on the project page of the BEP Marketplace. As the project progresses, additional research will be conducted, particularly to address areas that prove more complex and require a deeper understanding of the relevant context and methodologies. I have also reviewed scientific and online articles on weak labeling, which have provided insights and resources into how to go about the lack labels in the dataset at hand.
 
 \begin{itemize}
     \item Sansone, C. \& Sperlí, G. (2022). Legal information retrieval systems: State-of-the-art and open issues. \textit{Information Systems}, 106, 101967.
     \item Gray, M., Savelka, J., Oliver, W., \& Ashley, K. (2023). Can GPT alleviate the burden of annotation? In \textit{Legal Knowledge and Information Systems} (pp. 157–166). IOS Press.
     \item Zin, M. M., Nguyen, H. T., Satoh, K., Sugawara, S., \& Nishino, F. (2023). Information extraction from lengthy legal contracts: Leveraging query-based summarization and GPT-3.5. In \textit{Legal Knowledge and Information Systems} (pp. 177–186). IOS Press.
     \item Wolswinkel, C. J. (2024). Actieve openbaarmaking van beschikkingen. \textit{Nederlands Juristenblad}, volume 24 (pp. 1851–1857) (in Dutch only)\footnote{Read in machine translated version}.
+    \item Lison, P., Barnes, J., \& Hubin, A. (2021). Weak Supervision Made Easy for NLP. 
+    \item Ratner, A., Liss, S., Selsky, J., \& Snoek, J. (2017). Snorkel: Rapid Training Data Creation with Weak Supervision. In \textit{Proceedings of the 2017 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining} (pp. 2201-2211). ACM.
 \end{itemize}
+
+\textbf{Website references (articles, blog posts, libraries) }
+
+\begin{itemize}
+    \item Humanloop. (2023). Why I changed my mind about weak labeling for ML. Retrieved from\\ \url{https://humanloop.com/blog/why-i-changed-my-mind-about-weak-labeling-for-ml}
+    
+    \item Weak labeling Python library (1): \texttt{Skweak}, \url{https://github.com/NorskRegnesentral/skweak}
+    \item Weak labeling Python library (2): \texttt{Snorkel}, \url{https://www.snorkel.org/}
+\end{itemize}
+
+
 
 
 
