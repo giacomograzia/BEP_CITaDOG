@@ -1,7 +1,5 @@
 \documentclass[12pt,a4paper,footinclude=true,twoside,headinclude=true]{report}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
 
 \usepackage{graphicx}
 
@@ -13,18 +11,16 @@
 \includegraphics[width=0.7\linewidth]{TUe-logo-descriptor-line-scarlet-L.png}\par
 Department of Mathematics and Computer Science
 
-
-% Structuring Dutch Energy Permit Data: 
 \vspace{3cm}
-{\Large\textbf{\[temporary\_title\]NLP and Hybrid Approaches for Legal Information Retrieval}}\par\vspace{0.5cm}
+{\Large\textbf{\[temporary\_title\]Case-Inclusive Transparency \\ for a Digital and Open Government}}\par\vspace{0.5cm}
 {\large\textit{Bachelor End Project Report}}\par\vspace{1cm}
 {\large Giacomo Grazia}\par
 
 \vfill
 
 \emph{Supervisors:}\par
-Prof. Dr. Johan Wolswinkel, LL.M.\par
-Harry Nan, PhD ...... \par
+Prof. Dr. Johan Wolswinkel. LL.M.\par
+Harry Nan ...... \par
 
 \vspace{2cm}
 
@@ -34,10 +30,6 @@ Harry Nan, PhD ...... \par
 \end{titlepage}
 
 \begin{abstract}
-	
-\large\textbf{ >> TBD AT THE END <<} \normalsize
-
-
 \textsf{Write an abstract for your work. Replace each of the points below with one sentence (two if you must) and you have your abstract. Write it when you finished your entire report.\footnote{https://www.easterbrook.ca/steve/2010/01/how-to-write-a-scientific-abstract-in-six-easy-steps/}}
     
 \textsf{Introduction.} In one sentence, what’s the topic? Phrase it in a way that your reader will understand. If you’re writing a PhD thesis, your readers are the examiners – assume they are familiar with the general field of research, so you need to tell them specifically what topic your thesis addresses. Same advice works for scientific papers – the readers are the peer reviewers, and eventually others in your field interested in your research, so again they know the background work, but want to know specifically what topic your paper covers.
@@ -60,8 +52,21 @@ Harry Nan, PhD ...... \par
 
 
 %%% ===============================================================================
-x\chapter{Introduction}\label{sec:introduction}
+\chapter{Introduction}\label{sec:introduction}
 %%% ===============================================================================
+
+\textsf{Purpose and scope of your entire report}. The purpose of your entire report is to make a \textbf{scientific argument using the scientific method}. A scientific argument always has the following steps that all must come in this order.
+%
+\begin{itemize}
+    \item[SM1] \textbf{Explicate the assumptions and state of the art} on which you are going to conduct your research to investigate your research problem/test the hypothesis.
+    \item[SM2] Clearly and precisely  \textbf{formulate a research problem or hypothesis}.
+    \item[SM3] \textbf{Describe the (research) method} that you followed to investigate the problem / to test the hypothesis in a way that \textbf{allows someone else to reproduce your steps}. The method must includes steps and criteria for evaluating whether you answered your question successfully or not.
+    \item[SM4] \textbf{Provide execution details} on how you followed the method in the given, specific situation.
+    \item[SM5] \textbf{Report your results} by describing and summarizing your measurements. You must not interpret your results.
+    \item[SM6] \textbf{Now interpret your results} by contextualizing the measurements and drawing conclusion that lead to answering your research problem or defining further follow-up research problems.
+\end{itemize}
+%
+This template will mark various parts of the structure with SM1-SM6 to recall to you which step of a scientific argument is used and where.
 
 \textsf{Purpose and scope of Chapter~\ref{sec:introduction}}. The introduction chapter is a summary of your work and your scientific argument that shall be understandable to anyone in your scientific field, e.g., anyone in Data Science. A reader must be able to comprehend the problem, method, relevant execution details, results, and their interpretation by reading the introduction and the introduction alone. Section~\ref{sec:introduction:topic} introduces the general topic of your research. Section~\ref{sec:introduction:state-of-art} discusses the state of the art and identifies a research. Section~\ref{sec:introduction:research-question} then states the research problem to investigate. Section~\ref{sec:problem-exposition:research-method} explains the research method that was followed, possibly with execution details. Section~\ref{sec:introduction:results} then presents the results and their interpretation. Only if a reader thinks they are not convinced or they need more details to reproduce your study, they shall have to read further. The individual chapters and sections provide the details for each of the steps in your scientific argument. 
 
@@ -70,92 +75,55 @@ You usually write the introduction chapter \emph{after} you wrote all other chap
 \textsf{Purpose and scope of the introduction paragraph to a chapter}. The paragraph you are reading above is a typical introductory paragraph to a chapter. It is a high-level summary of the chapters' topic (SM1 and SM2). It gives the reader some guidance by breaking down the chapter topic into subtopics that are clearly named (SM3) in the right order with forward references to the corresponding sections (SM4). It may close with announcing the result you obtain (SM6) but this is usually not done in the opening paragraph of the introduction.
 
 % ---------------------------------------------------------------------------------
-\section{Context and Relevance of Legal Information Disclosure - DRAFT}\label{sec:introduction:topic}
-% ---------------------------------------------------------------------------------
-% EX Context and Topic (SM1)\\
-% valutare se fare paragrafi titolati
-
-% 1
-% In recent years, the field of information extraction has seen significant progress with three notable approaches. prompt engineering techniques have been employed with Generative Pre-trained Transformer (GPT) models leveraging their natural language understanding to extract information by guiding their responses to tailored prompts or queries [6]. These approaches, empowered by large language models (LLMs), offer the potential to significantly streamline document review processes, saving time and resources while enhancing the accuracy of information extraction.
-% In the legal domain, extracting information from contracts -> challenges -> legth*, language, availability, 
-% NER approach is better suited for extracting short entities, whereas the QA approach is more effective for longer entity extraction [7]
-
-% 2 on the purpose, why relevant to
-
-% 3 also on relevance (Johan)
-
-
-% *Transformer-based models have a maximum sequence length they can handle
-
-\textsf{Advancements in Government Transparency Policies}. Given recent advancements in transparency policies, particularly with the Open Government Act, proactive disclosure of government documents has been prioritized to enhance public oversight. Such policies enable citizens to assess governmental actions, fostering accountability and reducing opacity in administrative processes. However, implementing these disclosures remains challenging due to the sheer volume of data generated and the historical lack of standardized formatting in legal documents, which complicates large-scale analyses.
-
-\textsf{Challenges in Legal Data Standardization and Analysis.} Furthermore, legal data often lacks uniformity, as much of it has not been structured in a way that facilitates easy access or comparative study. Structured metadata, which refers to organized data elements that describe key information (such as decision dates, parties involved, and legal references), is often absent in publicly available administrative decisions, like permits. This lack of organization makes comprehensive analysis labor-intensive and, at times, impractical. Conducting comparative studies on these decisions, although complex, can significantly improve the consistency of legal application and reduce risks of arbitrary rulings. However, achieving this through traditional legal research alone is increasingly impractical due to time constraints and resource limitations.
-
-\textsf{Leveraging NLP for Efficient Legal Data Processing.} The recent developments in natural language processing (NLP)—a field of artificial intelligence focused on enabling computers to interpret and process human language—offer powerful tools for automating the extraction and structuring of information from legal texts. Specifically, large language models (LLMs), such as those developed by OpenAI and other organizations, have demonstrated impressive capabilities in understanding and analyzing text with high accuracy. These advanced information extraction techniques allow the processing of vast quantities of legal data with minimal human intervention, enabling accurate and detailed analysis at scale. This evolution in NLP represents a viable solution for handling large datasets in the legal domain, aligning with the growing demand for transparency and accessibility in governmental decision-making.\\
-
-
-% ---------------------------------------------------------------------------------
-\section{State of the Art DRAFT}\label{sec:introduction:state-of-art}
+\section{Context and Topic (SM1)}\label{sec:introduction:topic}
 % ---------------------------------------------------------------------------------
 
-In recent years, there has been a growing emphasis on automated information extraction from legal documents to meet transparency requirements, streamline legal analysis, and facilitate comparative studies. However, significant challenges persist in achieving accurate, scalable solutions in this domain. 
+\textsf{Purpose and scope}. You begin with providing the general scientific audience an introduction into the specific topic of your work. The aim of this section is to first introduce the \emph{general subject of study} (``Giraffes are well-known animals and everyone's favorite''), the \emph{specific topic of societal or scientific interest} to investigate (``Giraffes have blue tongues'') and the \emph{objective of society/science towards} this topic (``it is unknown at the moment how the blue color tone evolved''). 
+It must be understandable by the general scientific public. Every \emph{term} with a specific meaning must be highlighted and introduced in precise language/concepts that only builds on a general scientific background. 
 
-Manual annotation has traditionally played a central role in labeling legal factors within documents, especially when considering judicial opinions and complex regulatory texts. Although human annotation provides high accuracy, it is inherently resource-intensive and difficult to scale, as highlighted by recent studies exploring legal text processing \cite{gpt_burden_annotation}. This demand for manual input underscores the need for more efficient annotation systems, particularly given the ever-increasing volume of legal data.  
-
-
-%REF FOR FIRST CLAIM + ML
-Current methods for legal information extraction predominantly rely on rule-based and traditional NLP techniques. Rule-based approaches operate on predefined linguistic patterns to identify specific legal terms and concepts, but these systems often struggle with the nuanced language and complex structures typical of legal documents \cite{SANSONE2022101967}. Such limitations have led researchers to investigate the potential of more machine learning-oriented approached, and, more recently, large language models (LLMs) as tools to assist in legal annotation and extraction tasks. Initial findings suggest that LLMs like GPT-4 have made strides in preliminary labeling, potentially serving as a foundation for automated annotation. However, there are notable concerns regarding the accuracy and reliability of these models, particularly around potential biases and their inability to capture intricate legal nuances without human oversight \cite{gpt_burden_annotation}.  % ADD HALLUCINATION RISK
-
-% source of diversity and inconsistency of legal data +  date of Open Government Act
-A key challenge in automating legal information extraction lies in the diversity and inconsistency of legal data. This issue is especially pressing in the context of transparency legislation, such as the Open Government Act, which mandates proactive disclosure of government decisions. While this legislation supports public access to government records, a lack of standardized formatting across legal documents complicates large-scale analysis and comparative studies \cite{openbaarmaking_beschikkingen_johan}. Without structured metadata—elements like decision dates, involved parties, and legal references—publicly available legal documents remain difficult to navigate and analyze.  
-
-The gap between transparency mandates and the current capabilities of legal information extraction (IE) underscores the need for hybrid annotation models. Combining the scalability of large language models (LLMs) with the expertise of human annotators could significantly improve both efficiency and accuracy in processing legal documents. However, relying solely on human annotators is often impractical due to the costs and time-intensive nature of manual annotation. Therefore, it is crucial to integrate rule-based methods to streamline the annotation process, with human intervention focused primarily on oversight.
-
-While LLMs can provide valuable preliminary results, they are sometimes unreliable due to risks like hallucination. By first applying rule-based methods, relevant information can be extracted to create a prompt that gives the LLM more context, which helps limit the risk of generating unrelated or inaccurate outputs. This integration enables human experts to validate and refine the extracted information with fewer risks of irrelevant content. However, verification on a large scale remains a challenge when the volume of data to review becomes substantial.
-
-Introducing a rule-based component alongside LLMs allows for broader and more accurate applications, enhancing overall reliability. This hybrid approach could offer a promising solution to improve the accessibility, consistency, and transparency of legal information systems, aligning with modern governance and research needs. Over time, automated IE could enable more seamless comparative studies across legal decisions, fostering consistent legal applications and reducing the risk of arbitrary rulings. \\\\ %cite johan
-
-I WANT TO ADD more from my notes on the papers to give a clearer overview of the state of the art.
-
+At the end of this section, you have explained and established a general goal that society/science universally agrees to be worth achieving (``knowing how everyone's favorite animal evolved the colour of their tongue'').
 
 % ---------------------------------------------------------------------------------
-\section{Research Question (SM2) DRAFT}\label{sec:introduction:research-question}
+\section{State of the Art (SM1)}\label{sec:introduction:state-of-art}
 % ---------------------------------------------------------------------------------
 
-This research addresses the gap in effectively extracting and structuring metadata from Dutch administrative decisions, particularly energy permits, to support transparency mandates like the Open Government Act. As transparency policies increasingly require government bodies to disclose documents in accessible formats, there is a growing need for structured data that enables public scrutiny and comparative analysis. However, implementing such disclosures faces significant challenges. The sheer volume of data and the lack of standardized formatting in legal documents complicate large-scale analysis and make comprehensive manual processing impractical. 
+\textsf{Purpose and scope}. You provide a more in-depth introduction into the research topic by contrasting the current state of the art in society/science in relation to the research topic you introduced in Sect.~\ref{sec:introduction:topic}. This introduction has to 
 
-This study aims to leverage natural language processing (NLP) techniques to systematically categorize and extract key metadata—such as issuance dates, involved parties, and regulatory references—from administrative decisions issued by the Autoriteit Consument \& Markt (ACM). Recognizing the constraints of incomplete labeling in legal data, weak labeling techniques will be explored to achieve systematic categorization with minimal manual intervention. This approach seeks to improve data accessibility, consistency, and transparency, thus enabling a deeper understanding of administrative decision-making patterns. This led to the following research question: \\ \\ \textit{How can NLP techniques be applied to effectively extract and structure key metadata from Dutch administrative decisions (energy permits), while overcoming the challenge of incomplete labels using weak labeling techniques, and comparing the performance of different approaches, including rule-based methods and machine learning?} \\
-
-In this context, \textit{eﬀectiveness} refers to the ability of NLP techniques to extract and structure meta-data from administrative decisions in a way that achieves satisfactory outcomes across multiple dimensions: accuracy, eﬃciency, scalability, and adaptability. An approach is considered eﬀective if it yields high-quality results, is feasible to implement, and can be applied to various types of decisions with minimal supervision.\\
-
-To answer this question comprehensively, the research question can be further broken down into the following sub-questions:
 \begin{itemize}
-	\item \textbf{Weak labeling}: \textit{How can weak labeling techniques be applied to systematically categorize Dutch administrative decisions, addressing the issue of incomplete data labeling?} THIS ANSWER WILL present how the data has been labeled in different ways depending on the metadata (e.g. dates with gpt, legal ground with LX + gpt, NER for ontvanger etc.) 
-	\item \textbf{Comparison of techniques}: \textit{Which NLP techniques—whether rule-based, machine learning, or a hybrid approach—are most effective in extracting key metadata from administrative decisions in the absence of fully labeled data?} THIS IS VERY CONNECTED TO PREVIOUS SUBQUESTION. However, focus is on the outcomes. WOULD like to have feedback on this.
+    \item present established facts, methods, and results that provide a deeper  understanding of the research topic (``prior work on giraffe genomes, relevance of giraffes for societal well-being, giraffes being a model-animal for various other studies, etc.'')
+    \item discuss in which ways prior and recent ideas still fall short of reaching the general goal you explained in Sect.~\ref{sec:introduction:topic} (``prior work only sequenced the genome of one giraffe and did not consider genes of ancient ancestors'')
 \end{itemize}
 
-This study hypothesizes that a hybrid approach integrating rule-based methods with large language models (LLMs) could provide a scalable solution without compromising accuracy. For instance, rule-based methods can assist in generating contextual information for LLMs, reducing the likelihood of hallucinations and ensuring more relevant, accurate extractions. This research has the potential to support automated information extraction at scale, making it feasible to conduct comparative studies across legal decisions, fostering a more consistent application of the law, and reducing the risk of arbitrary rulings. Ultimately, insights from this work will contribute to the broader goal of achieving accessible and transparent government information, advancing both policy analysis and academic research in legal studies.
+You have to provide citations/literature references for each of the statements and claims you are making. This section is usually a summary of the related work discussion in Chapter~\ref{sec:background}.
+
+At the end of this section, you have established a \emph{knowledge gap} between the state of the art and the general objective you developed in Sect.~\ref{sec:introduction:topic}. \textbf{Stating a (knowledge) gap between a status quo and a desired situation is the \emph{first step} of a writing scientific argument.} 
 
 
 % ---------------------------------------------------------------------------------
-\section{Method or Approach (SM3, SM4) DRAFT}\label{sec:introduction:method}
+\section{Research Question (SM2)}\label{sec:introduction:research-question}
 % ---------------------------------------------------------------------------------
 
-To address the research questions outlined in Section~\ref{sec:introduction:research-question}, a structured workflow was developed, encompassing data preparation, information extraction, and final analysis. This approach applies natural language processing (NLP) techniques to extract and structure key metadata from Dutch administrative decisions, specifically focusing on energy permits issued by the Autoriteit Consument \& Markt (ACM), sourced directly from the website \texttt{www.acm.nl}.
+\textsf{Purpose and scope}. In this section you state in which way you will address the knowledge gap you identified at the end of Sect.~\ref{sec:introduction:state-of-art}. You usually cannot address and resolve the entire knowledge gap in your work. The purpose of this section is to clearly detail the specific part of the knowledge that you will address. You thereby make all the assumptions explicit that underlie your work (``in this report we focus on genomes of female giraffes who lived in the years 1950-2000 in South Africa'').
 
-Data preparation involved cleaning and formatting the initial dataset, which was provided in CSV format. Since the raw data contained OCR errors [ADD DETAILS ON COLLECTION? or at least more on what OCR is and its limitations/issues i will have to fix], a combination of rule-based techniques (e.g., regular expressions for newline or non-ASCII character removal) and the OpenAI API was used for correction. Minor errors, such as misspellings or misformatted company names (e.g., ”totalenergies” corrected to “TotalEnergies”) and split words (e.g., “art icle” to “article”), were addressed using a custom prompt (HERE MENTION PROMPT OR add it to later and more detailed section) designed to minimize unnecessary alterations. For entries with significant errors where automated recovery was infeasible, such as unreadable text, manual flagging and deletion were applied, affecting around 0.06\% of the total dataset.
+Your general research question states
+\begin{itemize}
+    \item The starting point/assumptions you are making from which your research starts (``for the given 13 genomes of female giraffes...''), and
+    \item the final objective/solution you want to reach (``...identify the genes involved in color expression of giraffe tongues...'')
+    \item and the evaluation criteria that will determine whether you are successful (``...that are present in at least 75\% of the studied giraffes'')
+\end{itemize}
 
-The information extraction phase utilized a combination of NLP models and regular expressions to identify and extract key data points, such as issuance dates, legal grounds, and parties involved (CONSIDERING ADDING ORIGINAL DUTCH NAMES FOR THEM). These structured elements are essential for any subsequent analysis, enabling the comparison of decisions across multiple categories. 
-
-THIS PART GIVES A GENERAL IDEA OF WHAT WOULD BE THE TEXT IN CASE I CAN GO FURTHER with an analysis based on the extracted metadata.
-
-Finally, the processed data was analyzed to evaluate cohesiveness among decisions and distinctness among classes of decisions.
-
-The entire process emphasizes reproducibility, ensuring that each step can be systematically followed to handle similar datasets effectively. This approach aligns with the objectives of transparency and accessibility, providing structured insights from unstructured data and supporting comparative legal analysis.
-
+You will usually break your general research question down into sub-research questions. You may do this here. The sub-research questions have to form a chain that take you in smaller steps from the starting point/assumptions of your general research question to your final objective and evaluation.
 
 % ---------------------------------------------------------------------------------
-\section{Findings (SM5, SM6) TO BE DONE AT THE END}\label{sec:introduction:results}
+\section{Method or Approach (SM3, SM4)}\label{sec:introduction:method}
+% ---------------------------------------------------------------------------------
+ 
+\textsf{Purpose and scope}. In this section you outline the method that you applied to answer the research questions, or the new technical approach that you developed to answer it. It is a summary of the steps that someone else has to take in order to reproduce your steps. Mention here the data sets you had to obtain/gather/analyze, interviews with stakeholders you had to make to further develop the research questions, technical artifacts (programs, algorithms, models) you could apply or that you had to develop (and how they work).
+
+The section is most readable if you give each of the steps in your method its own paragraph. In each paragraph you first briefly explain the concept of the step in your method (SM3, ``we explored the data through visual analytics'') and then provide details in execution (SM4, ``we used tool X, we developed dashboard Y'') include a forward reference to the respective chapter that provides more details.
+
+% ---------------------------------------------------------------------------------
+\section{Findings (SM5, SM6)}\label{sec:introduction:results}
 % ---------------------------------------------------------------------------------
 
 \textsf{Purpose and scope}. You close the introduction by clearly stating the evaluation setup you designed to evaluate the success of your study regarding the research objective, which comes in two steps. It is most likely a summary of your evaluation in Chapter~\ref{sec:evaluation}.
@@ -187,7 +155,7 @@ Finally state briefly how much closer society and science have come in answering
 \end{itemize}
 
 %%% ===============================================================================
-\chapter{Problem Exposition (optional -> PROBABLY NOT NEEDED)}\label{sec:problem-exposition}
+\chapter{Problem Exposition (optional)}\label{sec:problem-exposition}
 %%% ===============================================================================
 
 \textsf{Purpose and scope}. Introduce the problem context in more detail if Sect.~\ref{sec:introduction:topic} does not provide all necessary information about the problem to follow the rest of the report. This can include further details on the data you studied, context assumptions and requirements, etc. 
