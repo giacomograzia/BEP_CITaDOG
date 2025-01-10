@@ -1,22 +1,24 @@
-# Data manipulation and analysis
+# Data manipulation and analysis ------------------------
 pandas
 numpy
 
-# Data visualization
+# Data visualization ------------------------------------
 matplotlib
 seaborn
 
-# Natural Language Processing
+# Natural Language Processing ---------------------------
 nltk
 spacy
 transformers
 
-# Machine Learning
+# Machine Learning --------------------------------------
 scikit-learn
 
-# For rule-based processing
+# For rule-based processing -----------------------------
 regex
 
-# Miscellaneous
+# Miscellaneous -----------------------------------------
 tqdm  # For progress bars
 jupyterlab  # For Jupyter Notebook support
+openai  # For GPT API
+cdifflib  # For string similarity
