@@ -1,6 +1,6 @@
-# Case-Inclusive Transparency for a Digital and Open Government (CITaDOG)
+# Information Extraction from Dutch Administrative Decisions: A Comparison of Supervised NLP Techniques and Unsupervised Large Language Models
 
-brief description of what project does.
+This repository is part of the Case-Inclusive Transparency for a Digital and Open Government (CITaDOG) project by Tilburg University. The project aims to enhance transparency in administrative decision-making through the development of scalable and adaptable NLP techniques. This repository contains code and datasets used to extract key metadata—such as recipients, dates, legal references, and legal effects—from Dutch administrative decisions by the *Autoriteit Consument & Markt* (ACM). By comparing supervised machine learning models with unsupervised approaches using Large Language Models (here implemented using the OpenAI api), the research offers insights into the trade-offs between precision, scalability, and adaptability in information extraction tasks in the context of Dutch Adminstrative Decisions.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -25,5 +25,18 @@ brief description of what project does.
     ```
 
 ## Usage
+This repositories consists of five code folders, namely:
 
-Instructions on how to run the project or examples of usage.
+- 🗂️ `1,2_data_preprocessing_eda`
+    This folder contains the initial data processing steps and exploratory analysis for the research. It includes the following:
+    - **`original_data` folder**: contains the raw, scraped data used for the research (ACM permits) in `.csv` format.
+    - **`1,2_data_preprocessing_eda.ipynb`**: a Jupyter Notebook that performs Exploratory Data Analysis (EDA), preprocessing, and spelling correction of the dataset. It provides insights into the structure and quality of the raw data while preparing it for further analysis.
+    - **`data_spelling_correction_api_outputs.csv`**: a preprocessed dataset with spelling corrections applied using the OpenAI API. This dataset bypasses the need for re-running the API calls in sections 3.1.1 and 3.2.1 of the Jupyter Notebook.
+
+- 🗂️ Folder `3_recipient_extraction`
+
+- 🗂️ Folder `4_date_extraction`
+
+- 🗂️ Folder `5_legal_references_extraction`
+
+- 🗂️ Folder `6_legal_effect_extraction`
