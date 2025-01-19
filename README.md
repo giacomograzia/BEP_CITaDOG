@@ -25,21 +25,24 @@ This repository is part of the Case-Inclusive Transparency for a Digital and Ope
 This repositories consists of five code folders, namely:
 
 - 🗂️ `1,2_data_preprocessing_eda`
-    This folder contains the initial data processing steps and exploratory analysis for the research. It includes the following:
+
+  This folder contains the initial data processing steps and exploratory analysis for the research. It includes the following:
     - **`original_data` folder**: contains the raw, scraped data used for the research (ACM permits) in `.csv` format.
     - **`1,2_data_preprocessing_eda.ipynb`**: a Jupyter Notebook that performs Exploratory Data Analysis (EDA), preprocessing, and spelling correction of the dataset. It provides insights into the structure and quality of the raw data while preparing it for further analysis.
     - **`data_spelling_correction_api_outputs.csv`**: a preprocessed dataset with spelling corrections applied using the OpenAI API. This dataset bypasses the need for re-running the API calls in sections 3.1.1 and 3.2.1 of the Jupyter Notebook.
 
-- 🗂️ Folder `3_recipient_extraction`
-      This folder contains the EDA of the labeled recipients, supervised NER and LLM-based NER for recipient extraction. It includes the following:
-      - **`3_recipient_extraction.ipynb`**: a Jupyter Notebook that performs supervised NER, LLM-based NER and respective evaluations.
-      - **`data_recipient_extraction.csv`**: a preprocessed dataset with spelling LLM-extracted recipient entities using the OpenAI API. This dataset bypasses the need for re-running the API calls in section 2 of the Jupyter Notebook.
-
-- 🗂️ Folder `4_date_extraction`
+- 🗂️ `3_recipient_extraction`
+  
   This folder contains the EDA of the labeled recipients, supervised NER and LLM-based NER for recipient extraction. It includes the following:
-      - **`3_recipient_extraction.ipynb`**: a Jupyter Notebook that performs supervised NER, LLM-based NER and respective evaluations.
-      - **`data_recipient_extraction.csv`**: a preprocessed dataset with spelling LLM-extracted recipient entities using the OpenAI API. This dataset bypasses the need for re-running the API calls in section 2 of the Jupyter Notebook.
+    - **`3_recipient_extraction.ipynb`**: a Jupyter Notebook that performs supervised NER, LLM-based NER and respective evaluations.
+    - **`data_recipient_extraction.csv`**: a preprocessed dataset with spelling LLM-extracted recipient entities using the OpenAI API. This dataset bypasses the need for re-running the API calls in section 2 of the Jupyter Notebook.
 
-- 🗂️ Folder `5_legal_references_extraction`
+- 🗂️ `4_date_extraction` FINISH from here!
+  
+  This folder contains the EDA of the labeled recipients, supervised NER and LLM-based NER for recipient extraction. It includes the following:
+    - **`3_recipient_extraction.ipynb`**: a Jupyter Notebook that performs supervised NER, LLM-based NER and respective evaluations.
+    - **`data_recipient_extraction.csv`**: a preprocessed dataset with spelling LLM-extracted recipient entities using the OpenAI API. This dataset bypasses the need for re-running the API calls in section 2 of the Jupyter Notebook.
 
-- 🗂️ Folder `6_legal_effect_extraction`
+- 🗂️ `5_legal_references_extraction`
+
+- 🗂️ `6_legal_effect_extraction`
