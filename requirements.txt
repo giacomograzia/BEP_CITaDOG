@@ -9,7 +9,6 @@ seaborn
 # Natural Language Processing ---------------------------
 nltk
 spacy
-transformers
 
 # Machine Learning --------------------------------------
 scikit-learn
