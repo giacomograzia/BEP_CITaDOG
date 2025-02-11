@@ -26,7 +26,9 @@ The supervisors for this project are:
     ```
 
 ## Repository Structure and Content <a name="repo-structure"></a>
-This repositories consists of five code folders, namely:
+A detailed report of the research can be found in the file `bachelor_thesis_giacomo_grazia.pdf`.
+
+This repository consists of five code folders, namely:
 
 - 🗂️ `1,2_data_preprocessing_eda`
 
